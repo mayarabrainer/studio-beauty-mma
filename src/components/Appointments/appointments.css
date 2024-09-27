@@ -1,0 +1,67 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.header {
+  background-color: #ead8d9;
+  padding: 16px;
+}
+
+.header-title {
+  color: #51082a;
+  font-size: 36px;
+  font-family: 'Arial', sans-serif
+}
+
+.main-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.studio-title, .studio-subtitle {
+  font-family: 'Arial', sans-serif;
+}
+
+.appointment-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #670a36;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+form input, form select {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #7c0a3f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.appointment-list {
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #ead8d9;
+  padding: 8px;
+  font-family: 'Arial', sans-serif;
+}
