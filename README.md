@@ -1,8 +1,34 @@
-# React + Vite
+# 💅 Sistema de Agendamento de Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Descrição
+Este é um sistema de agendamento para studios, permitindo que clientes realizem o agendamento de serviços, selecionem datas e horários de forma prática e eficiente. O projeto foi desenvolvido utilizando **React** e executado com o **Vite**, proporcionando uma experiência de desenvolvimento rápida e otimizada.
 
-Currently, two official plugins are available:
+## 🎯 Funcionalidades
+- 👤 Cadastro de clientes para agendamento
+- 💇‍♀️💆‍♂️ Escolha de serviços oferecidos pelo studio
+- 📅 Seleção de data e horário para o agendamento
+- ✅ Exibição de agendamentos confirmados
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias Utilizadas
+- ⚛️ **React**: Para construção da interface de usuário interativa e dinâmica
+- ⚡ **Vite**: Ferramenta de build para otimizar o desenvolvimento e carregamento rápido
+- 🎨 **CSS**: Para estilização da aplicação e layout responsivo
+
+## 🚀 Como Rodar o Projeto
+1. Clone o repositório:
+   ```bash
+   git https://github.com/mayarabrainer/studio-beauty-mma.git
+
+2. Acesse o diretório do projeto:
+   ```bash
+   cd studio-beauty-mma
+   
+3. Instale as dependências:
+   ```bash
+   npm install
+
+4. Inicie o servidor de desenvolvimento:
+  ```bash
+  npm run dev
+
+
