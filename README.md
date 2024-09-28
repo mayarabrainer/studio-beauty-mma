@@ -32,3 +32,7 @@ Este é um sistema de agendamento para studios, permitindo que clientes realizem
   npm run dev
 
 
+
+##🗂️ Próximos Passos...
+- 🔗 Integração com um backend para armazenar dados de agendamento
+- 📧 Adicionar funcionalidade de envio de e-mail de confirmação
