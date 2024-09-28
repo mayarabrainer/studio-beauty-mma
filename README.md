@@ -32,6 +32,6 @@ Este é um sistema de agendamento para studios, permitindo que clientes realizem
    npm install
 
 4. Inicie o servidor de desenvolvimento:
-  ```bash
-  npm run dev
+   ```bash
+   npm run dev
 
