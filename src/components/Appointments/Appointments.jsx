@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './appointments.css';
 
 function Appointments() {
@@ -12,20 +12,79 @@ function Appointments() {
 
   const [appointments, setAppointments] = useState([]);
 
+
+  const fetchAppointments = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/agendamentos'); 
+      const data = await response.json();
+      setAppointments(data);
+    } catch (error) {
+      console.error('Erro ao buscar agendamentos:', error);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:3000/agendamento/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        setAppointments((prevAppointments) =>
+          prevAppointments.filter((appointment) => appointment._id !== id)
+        );
+        alert('Agendamento deletado com sucesso!');
+      } else {
+        alert('Erro ao deletar agendamento.');
+      }
+    } catch (error) {
+      console.error('Erro:', error);
+    }
+  };
+
+  
+  useEffect(() => {
+    fetchAppointments();
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setAppointments([...appointments, formData]);
-    setFormData({ nome: '', celular: '', servico: '', horario: '', data: '' });
+
+    try {
+      const response = await fetch('http://localhost:3000/agendamento', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        const { appointment } = await response.json();
+        setAppointments([...appointments, appointment]); 
+        setFormData({
+          nome: appointment.nome,
+          celular: appointment.celular,
+          servico: appointment.servico,
+          horario: appointment.horario,
+          data: appointment.data
+        }); 
+      } else {
+        console.error('Erro ao criar agendamento');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar agendamento:', error);
+    }
   };
 
   return (
     <div className="form-container">
-
       <h2>Agendar Cliente</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -91,17 +150,25 @@ function Appointments() {
           <option value="19:00">19:00</option>
           <option value="20:00">20:00</option>
         </select>
+        
         <button type="submit" className="submit-button">Confirmar</button>
       </form>
 
       <div className="appointment-list">
         <h3>Agendamentos</h3>
         <ul>
-          {appointments.map((appointment, index) => (
-            <li key={index}>
-              {"Cliente: " + appointment.nome} - {"Serviço: " + appointment.servico} - {appointment.data} - {appointment.horario+"hrs"}
-            </li>
-          ))}
+          {appointments.length > 0 ? (
+            appointments.map((appointment, index) => (
+              <li key={index}>
+                {"Cliente: " + appointment.nome} - {"Serviço: " + appointment.servico} - {appointment.data} - {appointment.horario + "hrs"}
+                <button className='button-delete'  onClick={() => handleDelete(appointment._id)} > <span class="material-symbols-outlined">
+                close
+                </span></button>
+              </li>
+            ))
+          ) : (
+            <li>Nenhum agendamento encontrado.</li>
+          )}
         </ul>
       </div>
     </div>

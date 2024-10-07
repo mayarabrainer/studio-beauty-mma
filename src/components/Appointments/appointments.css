@@ -60,6 +60,16 @@ form input, form select {
   margin-top: 20px;
 }
 
+.button-delete {
+  border: none;
+  margin-left: 10px;
+  transform: translateY(6px);
+  color: #51082a;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+
 footer {
   background-color: #ead8d9;
   padding: 8px;
