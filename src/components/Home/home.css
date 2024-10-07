@@ -19,22 +19,24 @@ html, body {
     flex-direction: column;
 }
 
-.header-home {
+.header-home .header-title-home {
     background-color: #fce6e6;
+    width: 100%;
+    position: fixed;
     padding: 10px 0;
-    
-}
-  
-.header-title-home {
     font-size: 18px;
     color: #51082a;
     text-transform: uppercase;
     letter-spacing: 2px;
+    z-index: 1000;
+    
 }
   
 .main-section-home {
     position: relative;
     flex-grow: 1;
+    margin-top: 40px;
+    padding-bottom: 20px;
 }
   
 .image-overlay-home {
@@ -93,7 +95,9 @@ footer {
     padding: 8px;
     text-align: center;
     width: 100%;
-    margin-top: auto;
-    font-family: 'Arial', sans-serif;
+    position: fixed; /* Fixar o footer */
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
   
