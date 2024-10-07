@@ -10,7 +10,7 @@ function Home() {
   };
 
   return (
-    <div className="app-container">
+    <div className="app-container-home">
       <header className="header-home">
         <h1 className="header-title-home">SALON & SPA</h1>
       </header>

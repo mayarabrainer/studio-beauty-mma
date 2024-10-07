@@ -76,7 +76,9 @@ function Appointments() {
           data: appointment.data
         }); 
       } else {
-        console.error('Erro ao criar agendamento');
+        const { message } = response;
+        console.error(message);
+        alert(message)
       }
     } catch (error) {
       console.error('Erro ao enviar agendamento:', error);
@@ -84,9 +86,12 @@ function Appointments() {
   };
 
   return (
+    
+    <section className='app-container-agendamento'>
     <div className="form-container">
-      <h2>Agendar Cliente</h2>
+      <h2 className='title-agendamento'>Agendar Cliente</h2>
       <form onSubmit={handleSubmit}>
+        
         <input
           type="text"
           name="nome"
@@ -95,6 +100,9 @@ function Appointments() {
           onChange={handleChange}
           required
         />
+        
+
+        
         <input
           type="text"
           name="celular"
@@ -172,6 +180,7 @@ function Appointments() {
         </ul>
       </div>
     </div>
+    </section>
   );
 }
 

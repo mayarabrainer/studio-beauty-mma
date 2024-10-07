@@ -1,12 +1,13 @@
-.app-container {
+.app-container-agendamento {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
+  align-items: center;
 }
 
 .header {
-  background-color: #ead8d9;
+  background-color: #fce6e6;
   padding: 16px;
 }
 
@@ -16,16 +17,15 @@
   font-family: 'Arial', sans-serif
 }
 
-.main-section {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .studio-title, .studio-subtitle {
   font-family: 'Arial', sans-serif;
 }
+
+.title-agendamento{
+  color: #51082a;
+  padding: 20px;
+}
+
 
 .appointment-button {
   padding: 10px 20px;
@@ -36,31 +36,60 @@
   cursor: pointer;
 }
 
+.appointment-list {
+  list-style-type: none;
+}
+
 .form-container {
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #fce6e6;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px; 
+  margin-top: 50px; 
 }
 
 form input, form select {
+  border-radius: 10px;
+  border: none;
   display: block;
+  background-color: #f7dae4;
   margin: 10px 0;
   padding: 8px;
   width: 100%;
 }
 
 .submit-button {
-  padding: 10px;
-  background-color: #7c0a3f;
-  color: white;
+  padding: 10px 30px;
+  background-color: #d7618a;
+  color: #fce1ed;
+  font-size: 20px;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-end; 
+  margin-top: 40px; 
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
 }
 
-.appointment-list {
+.submit-button:hover {
+  background-color: #e96b97;
+}
+
+.appointment-list ul {
   margin-top: 20px;
+  list-style-type: none;
+  color: #51082a;
+}
+
+.appointment-list h3 {
+  color:#51082a
 }
 
 .button-delete {
+  background-color: #fce6e6;
   border: none;
   margin-left: 10px;
   transform: translateY(6px);
@@ -69,9 +98,20 @@ form input, form select {
   padding-top: 10px;
 }
 
+.app-container-agendamento {
+  background: url('../../assets/fundo-spa.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-attachment: fixed;
+}
 
 footer {
-  background-color: #ead8d9;
+  background-color: #fce6e6;
+  color: #51082a;
   padding: 8px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
   font-family: 'Arial', sans-serif;
 }

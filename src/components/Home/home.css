@@ -6,37 +6,38 @@
     padding: 0;
     box-sizing: border-box;
   
-  }
+}
   
-  html, body {
+html, body {
     height: 100%;
-  }
+}
   
-.app-container {
+.app-container-home {
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .header-home {
-    background-color: #ead8d9;
+.header-home {
+    background-color: #fce6e6;
     padding: 10px 0;
-  }
+    
+}
   
-  .header-title-home {
+.header-title-home {
     font-size: 18px;
     color: #51082a;
     text-transform: uppercase;
     letter-spacing: 2px;
-  }
+}
   
-  .main-section-home {
+.main-section-home {
     position: relative;
     flex-grow: 1;
-  }
+}
   
-  .image-overlay-home {
+.image-overlay-home {
     position: relative;
     background-image: url('../../assets/bg.png'); 
     background-size: cover;
@@ -46,27 +47,27 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-  }
+}
   
-  .text-overlay-home {
+.text-overlay-home {
     text-align: left;
     color: #ead8d9;
-  }
+}
   
-  .studio-title-home {
+.studio-title-home {
     font-size: 90px;
     font-weight: bold;
     margin-bottom: -60px;
     font-family: "Playwrite DE Grund", cursive;
-  }
+}
   
-  .studio-subtitle-home {
+.studio-subtitle-home {
     font-size: 100px;
     margin-top: 20px;
     font-family: "Playwrite DE Grund", cursive;
-  }
+}
   
-  .appointment-button-home {
+.appointment-button-home {
     padding: 20px 40px;
     background-color: #ead8d9;
     color: #51082a;
@@ -79,21 +80,20 @@
     margin-top: 100px; 
     margin-bottom: 40px;
     font-family: 'Arial', sans-serif;
-  }
+}
   
-  
-  .appointment-button-home:hover {
+.appointment-button-home:hover {
     background-color: #fbccce;
-  }
+}
   
   
-  footer {
-    background-color: #ead8d9;
+footer {
+    background-color: #fce6e6;
     color: #51082a;
     padding: 8px;
     text-align: center;
     width: 100%;
     margin-top: auto;
     font-family: 'Arial', sans-serif;
-  }
+}
   
