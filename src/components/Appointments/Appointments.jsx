@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './appointments.css';
 
 function Appointments() {
@@ -75,10 +77,11 @@ function Appointments() {
           horario: appointment.horario,
           data: appointment.data
         }); 
+        toast.success('Agendamento realizado com sucesso!'); 
       } else {
-        const { message } = response;
+        const { message } = await response.json();
         console.error(message);
-        alert(message)
+        toast.error(message);
       }
     } catch (error) {
       console.error('Erro ao enviar agendamento:', error);
@@ -88,6 +91,7 @@ function Appointments() {
   return (
     
     <section className='app-container-agendamento'>
+    <ToastContainer />
     <div className="form-container">
       <h2 className='title-agendamento'>Agendar Cliente</h2>
       <form onSubmit={handleSubmit}>
@@ -100,8 +104,6 @@ function Appointments() {
           onChange={handleChange}
           required
         />
-        
-
         
         <input
           type="text"
