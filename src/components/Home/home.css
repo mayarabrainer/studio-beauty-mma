@@ -95,7 +95,7 @@ footer {
     padding: 8px;
     text-align: center;
     width: 100%;
-    position: fixed; /* Fixar o footer */
+    position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1000;
