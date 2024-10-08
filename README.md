@@ -14,10 +14,6 @@ Este é um sistema de agendamento para studios, permitindo que clientes realizem
 - ⚡ **Vite**: Ferramenta de build para otimizar o desenvolvimento e carregamento rápido
 - 🎨 **CSS**: Para estilização da aplicação e layout responsivo
 
-## 🗂️ Próximos Passos...
-- 🔗 Integração com um backend para armazenar dados de agendamento
-- 📧 Adicionar funcionalidade de envio de e-mail de confirmação
-
 ## 🚀 Como Rodar o Projeto
 1. Clone o repositório:
    ```bash
