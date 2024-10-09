@@ -8,6 +8,7 @@ Este é um sistema de agendamento para studios, permitindo que clientes realizem
 - 💇‍♀️💆‍♂️ Escolha de serviços oferecidos pelo studio
 - 📅 Seleção de data e horário para o agendamento
 - ✅ Exibição de agendamentos confirmados
+- 📱 Confirmação de agendamento do cliente via WhatsApp
 
 ## 🛠️ Tecnologias Utilizadas
 - ⚛️ **React**: Para construção da interface de usuário interativa e dinâmica
